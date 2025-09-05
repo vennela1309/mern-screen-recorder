@@ -1,0 +1,19 @@
+[build]
+  # Set base to your frontend folder
+  base = "frontend"
+  # Vite build command
+  command = "npm run build"
+  # Publish directory after build
+  publish = "dist"
+
+[build.environment]
+  # Set your backend URL
+  VITE_API_URL = "https://mern-screen-recorder-mcvt.onrender.com"
+  # Set Node version to avoid Rollup native module issues
+  NODE_VERSION = "20"
+
+# Optional: Redirect all routes to index.html (for React SPA)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
